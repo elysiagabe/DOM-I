@@ -132,3 +132,26 @@ email.textContent = siteContent["contact"]["email"];
 // Footer
 const footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"];
+
+
+// STRETCH 
+const newButton = document.createElement("button");
+newButton.textContent = "Switch Things Up";
+
+const buttonParent = document.querySelector(".cta-text");
+
+buttonParent.appendChild(newButton);
+
+const newContent = {
+  "cta": {
+    "h1": "Hello Hello Hello",
+    "button": "Click Me Right Now!",
+    "img-src": "img/newImg.jpg"
+  },
+};
+
+newButton.addEventListener('click', (event) => {
+  cta.textContent = newContent["cta"]["h1"];
+  ctaButton.textContent = newContent["cta"]["button"];
+  ctaImg.src = newContent["cta"]["img-src"];
+});
