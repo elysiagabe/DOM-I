@@ -49,6 +49,23 @@ Array.from(links).forEach((link, nav) => {
   link.textContent = navItems[nav];
 })
 
+const newNavA = document.createElement("a");
+newNavA.textContent = "Home";
+newNavA.src = "index.html";
+
+const newNavB = document.createElement("a");
+newNavB.textContent = "Help";
+newNavB.src = "#";
+
+const navParent = document.querySelector("nav");
+
+navParent.prepend(newNavA);
+navParent.appendChild(newNavB);
+
+Array.from(links).forEach(link => {
+  link.style.color = "green";
+})
+
 // CTA
 const cta = document.querySelector(".cta-text h1");
 cta.textContent = siteContent.cta.h1;
